@@ -1,0 +1,50 @@
+start
+new vrema number
+set vrema TIME 
+
+new god_rozhdeniya number
+set god_rozhdeniya 2005 
+
+new god number
+new mes number
+new day number
+
+
+set god 1970
+set mes 1
+set day 1
+
+loop year_convert (vrema > 31536000000)
+  set vrema vrema - 31536000000
+  set god god + 1
+end year_convert
+
+loop month_convert (vrema > 2592000000)
+  set vrema vrema - 2592000000
+  set mes mes + 1
+end month_convert
+
+loop day_convert (vrema > 86400000)
+  set vrema vrema - 86400000
+  set day day + 1
+end day_convert
+
+
+new vozrast number
+set vozrast god - god_rozhdeniya
+
+
+new temp number
+set temp vozrast
+loop check_jubilee (temp > 9)
+  set temp temp - 10
+end check_jubilee
+
+
+if (temp > 0)
+  log string "В этом году у вас не юбилей."
+else
+  log string "В этом году у вас юбилей: " >> binary(vozrast) >> " лет"
+close
+
+finish
