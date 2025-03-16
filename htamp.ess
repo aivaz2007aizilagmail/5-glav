@@ -1,0 +1,11 @@
+start
+new vrema number
+set vrema TIME 
+
+set vrema vrema + 10800000
+
+? set vrema vrema - 10800000
+
+log string "Измененный временной штамп: " >> binary(vrema)
+
+finish
