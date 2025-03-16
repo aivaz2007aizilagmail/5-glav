@@ -1,0 +1,52 @@
+start
+new god number
+set god 2025 
+
+new temp number
+new is_leap number
+set is_leap 0 
+
+
+set temp god
+loop check_div_by_4 (temp > 0)
+  set temp temp - 4
+end check_div_by_4
+
+
+if (temp > 0)
+  
+  set is_leap 0
+else
+
+  set temp god
+  loop check_div_by_100 (temp > 0)
+    set temp temp - 100
+  end check_div_by_100
+
+  if (temp > 0)
+    
+    set is_leap 1
+  else
+    
+    set temp god
+    loop check_div_by_400 (temp > 0)
+      set temp temp - 400
+    end check_div_by_400
+
+    if (temp > 0)
+      
+      set is_leap 0
+    else
+      set is_leap 1
+    close
+  close
+close
+
+
+if (is_leap > 0)
+  log string binary(god) >> " год является високосным."
+else
+  log string binary(god) >> " год не является високосным."
+close
+
+finish
