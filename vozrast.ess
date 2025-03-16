@@ -1,0 +1,80 @@
+start
+new vrema number
+set vrema TIME
+
+new god number
+new mes number
+new day number
+
+new mes_string string
+new day_string string
+
+new god_rozhdeniya number
+new mes_rozhdeniya number
+new day_rozhdeniya number
+
+set god_rozhdeniya 2007
+set mes_rozhdeniya 8
+set day_rozhdeniya 3
+
+
+
+
+set god 1970
+
+set mes 1
+set day 1
+
+loop year_convert (vrema > 31536000000)
+  set  vrema vrema - 31536000000
+  set god god + 1
+
+end year_convert
+
+
+loop month_convert (vrema > 2592000000)
+  set vrema vrema - 2592000000
+  set mes mes + 1
+
+end month_convert
+
+
+loop day_convert (vrema > 86400000)
+  set vrema vrema  - 86400000
+  set day day +1
+end day_convert
+set day day - 13
+
+
+set god god - god_rozhdeniya
+set mes mes - mes_rozhdeniya
+set day day - day_rozhdeniya
+
+
+if ( 0 >day)
+  set mes mes - 1
+  set day day + 30
+close
+
+if (0> mes)
+  set god god - 1
+  set mes mes + 12
+close
+
+
+if (10 > mes)
+  set mes_string "0" + binary(mes)
+else
+  set mes_string binary(mes)
+close
+
+if (10 > day)
+  set day_string "0" + binary(day)
+else
+  set day_string binary(day)
+close
+
+
+log string "Вам:  " >> god >> " лет, " >> mes_string >> " месяцев, " >> day_string >> " дней"
+
+finish
