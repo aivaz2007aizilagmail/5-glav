@@ -1,7 +1,7 @@
 # 5-glav
 # 🚀 Добро пожаловать в 5 главу!
 
-[![GitHub Stars](https://github.com/aivaz2007aizilagmail/5-glav?style=for-the-badge&logo=github&color=yellow)]([https://github.com/aivaz2007aizilagmail/5-glav](https://github.com/aivaz2007aizilagmail/5-glav)/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/aivaz2007aizilagmail/5-glav?style=for-the-badge&logo=github&color=yellow)](https://github.com/aivaz2007aizilagmail/5-glav/stargazers)
 [![GitHub Watchers](https://img.shields.io/github/watchers/aivaz2007aizilagmail/5-glav?style=for-the-badge&logo=github&color=blue)](https://github.com/aivaz2007aizilagmail/5-glav/subscriptions)
 
 > ### ❤️ Поддержите работу за 2 клика!
@@ -19,6 +19,7 @@
 
 ### 🛠️ Как поддержать проект?
 1. **Перейдите в репозиторий**:  
+   [github.com/aivaz2007aizilagmail/5-glav(https://github.com/aivaz2007aizilagmail/5-glav)
 2. **Нажмите «Star»** в правом верхнем углу ⭐
 3. **Подпишитесь** на обновления (кнопка «follow» 👀)
 
