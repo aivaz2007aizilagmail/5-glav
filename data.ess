@@ -14,8 +14,8 @@ new day_string string
 
 set god 1970
 
-set mes 1
-set day 1
+set mes 0
+set day 0
 
 loop year_convert (vrema > 31536000000)
   set  vrema vrema - 31536000000
@@ -42,7 +42,7 @@ loop day_convert (vrema > 86400000)
   set vrema vrema  - 86400000
   set day day +1
 end day_convert
-set day day - 13
+set day day + 18
 
 
 if (10 > day) 
